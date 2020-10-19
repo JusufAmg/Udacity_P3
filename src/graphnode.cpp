@@ -11,7 +11,7 @@ GraphNode::~GraphNode()
     //// STUDENT CODE
     ////
 
-    delete _chatBot; 
+//    delete _chatBot; deleting an alrady deleted memory location 
 
     ////
     //// EOF STUDENT CODE
