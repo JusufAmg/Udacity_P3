@@ -48,7 +48,8 @@ ChatBot::~ChatBot()
         std::cout << "copy constructor \n";
         _image = new wxBitmap();
         *_image = *source._image;
-        this->_chatLogic = input._chatLogic;
+    }
+     /*   this->_chatLogic = input._chatLogic;
         this->_rootNode = input._rootNode;
         this->_currentNode = input._currentNode;
         this->_image = new wxBitmap(*input._image);
@@ -67,7 +68,7 @@ ChatBot::~ChatBot()
     ChatBot &operator=(const ChatBot &&source) {
         std::cout << "move assignment \n";
         return x;
-    }
+    } */
 ////
 //// EOF STUDENT CODE
 
