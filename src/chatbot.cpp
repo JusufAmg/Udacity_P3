@@ -62,16 +62,23 @@ ChatBot&  ChatBot::operator=(const ChatBot &source) {
     _currentNode = source._currentNode;
     return *this;
 }
- /*   
-
-  
-    ChatBot(ChatBot &&source){
-        std::cout << "move constructor \n";
-    }
-    ChatBot &operator=(const ChatBot &&source) {
-        std::cout << "move assignment \n";
-        return x;
-    } */
+ChatBot::ChatBot(ChatBot &&source){
+    std::cout << "move constructor \n";
+    _image = source._image;
+    _chatLogic = source._chatLogic;
+    _rootNode = source._rootNode;
+    _currentNode = source._currentNode;
+    source._image = NULL;
+}
+ChatBot& ChatBot::operator=(const ChatBot &&source) {
+    std::cout << "move assignment \n";
+    _image = source._image;
+    _chatLogic = source._chatLogic;
+    _rootNode = source._rootNode;
+    _currentNode = source._currentNode;
+    source._image = NULL;
+    return *this;
+} 
 ////
 //// EOF STUDENT CODE
 
