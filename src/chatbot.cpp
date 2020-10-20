@@ -70,7 +70,7 @@ ChatBot::ChatBot(ChatBot &&source){
     _currentNode = source._currentNode;
     source._image = NULL;
 }
-ChatBot& ChatBot::operator=(const ChatBot &&source) {
+ChatBot& ChatBot::operator=( ChatBot &&source) {
     std::cout << "move assignment \n";
     _image = source._image;
     _chatLogic = source._chatLogic;

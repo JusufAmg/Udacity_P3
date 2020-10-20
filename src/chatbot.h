@@ -32,7 +32,7 @@ public:
     ChatBot(ChatBot &source); //copy constructor
     ChatBot &operator=(const ChatBot &); //copy assignment 
     ChatBot(ChatBot &&source); //move constructor
-    ChatBot &operator=(const ChatBot &&); //move assignment
+    ChatBot &operator=( ChatBot &&); //move assignment
     ////
     //// EOF STUDENT CODE
 
