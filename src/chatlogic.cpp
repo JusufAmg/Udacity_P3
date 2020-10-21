@@ -163,7 +163,7 @@ void ChatLogic::LoadAnswerGraphFromFile(std::string filename)
 
                             // create new edge
                             GraphEdge *edge = new GraphEdge(id);
-                            edge->SetChi jmldNode(childNode->get());
+                            edge->SetChildNode(childNode->get());
                             edge->SetParentNode(parentNode->get());
                             _edges.push_back(edge);
 
@@ -208,7 +208,7 @@ void ChatLogic::LoadAnswerGraphFromFile(std::string filename)
 
             if (rootNode == nullptr)
             {
-                rootNode = it; // assign current node to root
+                rootNode = it->get(); // assign current node to root
             }
             else
             {
