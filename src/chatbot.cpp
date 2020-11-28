@@ -66,7 +66,11 @@ ChatBot::ChatBot(ChatBot &&source){
     this->_chatLogic = source._chatLogic;
     this->_rootNode = source._rootNode;
     this->_currentNode = source._currentNode;
-    delete source._image;
+    //delete source._image;
+    source._chatLogic = nullptr;
+    source._rootNode = nullptr;
+    source._currentNode = nullptr;
+    source._image = nullptr
 }
 ChatBot& ChatBot::operator=( ChatBot &&source) {
     std::cout << "move assignment \n";
@@ -74,7 +78,11 @@ ChatBot& ChatBot::operator=( ChatBot &&source) {
     this->_chatLogic = source._chatLogic;
     this->_rootNode = source._rootNode;
     this->_currentNode = source._currentNode;
-    delete source._image;
+    //delete source._image;
+    source._chatLogic = nullptr;
+    source._rootNode = nullptr;
+    source._currentNode = nullptr;
+    source._image = NULL;
     return *this;
 } 
 ////
