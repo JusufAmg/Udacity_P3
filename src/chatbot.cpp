@@ -46,21 +46,22 @@ ChatBot::~ChatBot()
 ////
 ChatBot::ChatBot(const ChatBot &source){
     std::cout << "copy constructor \n";
-    this->_image = new wxBitmap(*source._image);
+
     this->_rootNode = source._rootNode;
     this->_currentNode = source._currentNode;
     this->_chatLogic = source._chatLogic;
+    this->_image = new wxBitmap(*source._image);
     this->_chatLogic->SetChatbotHandle(this);
 
 }
 ChatBot&  ChatBot::operator=(const ChatBot &source) {
     std::cout << "copy assignment  \n";
     if (this == &source) return *this;
-    this->_image = new wxBitmap(*source._image);
-    this->_chatLogic->SetChatbotHandle(this);
     this->_chatLogic = source._chatLogic;
     this->_rootNode = source._rootNode;
     this->_currentNode = source._currentNode;
+    this->_image = new wxBitmap(*source._image);
+    this->_chatLogic->SetChatbotHandle(this);
     return *this;
 }
 ChatBot::ChatBot(ChatBot &&source){
